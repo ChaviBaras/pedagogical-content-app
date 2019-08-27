@@ -1,0 +1,22 @@
+<div class="content" style="max-width: 600px; margin: 0 auto;">
+  <table style="width:100%;" cellspacing="0" cellpadding="0">
+    <tr>
+      <th width="50" *ngFor="let f of dataForum"></th>
+    </tr>
+    <tr align="right" *ngFor="let f of dataForum">
+      <td style="vertical-align: top; padding-bottom: 5px;" colspan="11">
+        <p style="float:right; font-family: 'Helvetica-Neue', Helvetica, Arial; font-weight: 300; display: inline-block; min-width: 70px; margin: 0; vertical-align: top; line-height: 1.4; font-size: 16px; padding: 15px 20px; background-color: #EFF3F7; border-radius: 5px; box-shadow: 0 1px 3px 0px #a7b6c5; margin: 5px 10px 0;">{{f.opinionText}}</p>
+        <span style="float:right; font-family: 'Helvetica-Neue', Helvetica, Arial; font-size: 9px; padding: 4px; letter-spacing: 0.1em; border-radius: 2px; color: #147FD7; text-transform: uppercase; display: block; margin: 5px 10px; clear: both;">{{f.userCode}}  </span><a routerLink="/menu/content/'sfddgfdg'">{{f.contentId}}</a>
+      </td>
+      <td style="vertical-align: top; padding-bottom: 5px;" width="50"></td>
+    </tr>
+  </table>
+</div>
+
+<input  name="opinionText" [(ngModel)]="f.opinionText" type="text" placeholder="יש לך מה להוסיף -כתבי לנו"/>
+<button  class="btn btn-dark" type="submit" (click)="enter()">הוסף</button>
+<div class="footer" style="text-align: center; margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd;">
+<p class="disclaimer" style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; display: inline-block; border: 1px solid #555; padding: 5px 10px; color: #444; margin-bottom: 5px;">תודה לכן על השתתפותכן</p>
+<p style="font-size: 11px; margin: 5px 0 0;"></p>
+<p style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;  font-size: 9px; margin: 15px 0 15px; color: #444;">פורום המרפד - 2019</p>
+</div>

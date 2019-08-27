@@ -1,0 +1,26 @@
+<!---לסדררררררררררררררררררר! יש פה משהו מסריח -->
+<div class="btn btn-dark" (click)="ingect(1)">קטגוריות</div>
+<div class="btn btn-dark"(click)="ingect(2)">נושאים</div>
+<div class="btn btn-dark"(click)="ingect(3)">סוגים</div>
+<ul *ngIf="categories">
+  <li *ngFor="let c of categories" class="list-group-item list-group">{{c.categoryName}} 
+    <button class="btn-sm" (click)="ingect(2,c.categoryId,null,null)" >נושאים</button>
+    <button class="btn-sm" (click)="ingect(3,c.categoryId,null,null)">סוגים</button>
+    <button class="btn-sm" (click)="ingect(4,c.categoryId,null,null)">תכנים</button>
+  </li>
+</ul>
+<ul *ngIf="subjects">
+  <li *ngFor="let s of subjects" class="list-group-item list-group">{{s.subjectName}} 
+    <button class="btn-sm" *ngIf="!tID"  (click)="ingect(3,cID,s.subjectId,tID)">סוגים</button>
+    <button class="btn-sm" (click)="ingect(4,cID,s.subjectId,tID)">תכנים</button>
+  </li> 
+</ul>
+<ul *ngIf="types">
+  <li *ngFor="let t of types" class="list-group-item list-group">{{t.typeName}} 
+    <button class="btn-sm" *ngIf="!sID" (click)="ingect(2,cID,sID,t.typeId)">נושאים</button>
+    <button class="btn-sm" (click)="ingect(4,cID,sID,t.typeId)" >תכנים</button>
+  </li>
+</ul>
+<ul class="list-group" *ngIf="contents">
+  <li class="list-group-item" *ngFor="let c of contents"  routerLink="/student/menu/content/{{c.contentPath}}" >{{c.contentName}} </li>
+</ul>

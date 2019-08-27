@@ -1,0 +1,30 @@
+<p>user works!</p>
+<!-- <div class=" card  container"> 
+    <div class="card-header bg-dark text-white">
+     הוספת תלמיד
+    </div>
+  <form class="form-horizontal">
+    <div class="form-group" >
+      <label class="control-lable">הכנס שם משתמש</label>
+      <input  class="form-control"type="text" name="userName" [(ngModel)]="user.userName" />
+    </div>
+    <div  class="form-group">
+      <label class="control-lable">איזה מסלול היא? </label>
+      <select  class="form-control" name="courseId" [(ngModel)]="user.courseId" >
+        <option *ngFor=" let c of course" [value]="user.courseId"> {{t.typeName}}</option>
+      </select >
+    </div>
+      <div class="form-group">
+        <button type="submit" class="form-control" (click)="send()" >שלח לי</button>
+      </div>
+  </form>
+  </div> -->
+
+  <div>
+  <ul *ngIf="users">
+  <li *ngFor="let u of users" class="list-group-item list-group">{{u.userName}}
+    <button class="btn-sm" (click)="delUser(u.userId)">מחיקה</button>
+    <button class="btn-sm"  >עדכון</button>
+  </li>
+</ul>
+  </div>

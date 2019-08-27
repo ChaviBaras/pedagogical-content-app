@@ -1,0 +1,25 @@
+<p>
+  manager works!
+</p>
+<input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf,.doc,.docx">
+<label for="file">Choose File</label>
+<input type="file"
+       id="file"
+       (change)="handleFileInput($event.target.files)"> 
+
+<!-- <ng-rate-it 	ng-model = "String, Number, Array"
+min = "Double"
+max = "Double"
+step = "Double"
+read-only = "Boolean"
+pristine = "Boolean"
+resetable = "Boolean"
+star-width = "Integer"
+star-height = "Integer" 
+style="width: 100px"
+></ng-rate-it>
+<div ng-rate-it ng-model="test.rateit"></div>
+<ng-rate-it ng-model="test.rateit"></ng-rate-it> -->
+<app-manage-order></app-manage-order>
+<app-user></app-user>
+<router-outlet></router-outlet>

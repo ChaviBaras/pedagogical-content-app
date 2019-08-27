@@ -1,0 +1,20 @@
+<h3>תוצאות עבור</h3><app-search></app-search>
+<br>
+<br>
+<h4>לצמצום החיפוש על פי:</h4>
+<select class="form-control" name="subject" [(ngModel)]="subjectsId" (change)="sr()" aria-placeholder="true" title="נושאים" *ngIf="subjects">
+    <option *ngFor="let s of subjects" [value]="s.subjectId">{{s.subjectName}}</option>
+</select>
+<select class="form-control" name="type"[(ngModel)]="typeId" (change)="sr()" title="סוג החומר" *ngIf="types">
+    <option *ngFor="let t of types" [value]="t.typeId">{{t.typeName}}</option>
+</select> 
+<select class="form-control" name="course" [(ngModel)]="courseId" (change)="sr()" title="מסלולים" *ngIf="courses">
+    <option *ngFor="let c of courses" [value]="c.courseId">{{c.courseName}}</option>
+</select>
+<br>
+<br>
+<h5 *ngIf="contents">כ-{{contents.length}} תוצאות</h5>
+<br>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let c of contents" routerLink="/student/menu/content/{{c.contentPath}}">{{c.contentName}} {{c.contentPath}}</li>
+</ul>

@@ -1,0 +1,6 @@
+div *{
+    float: right;
+}
+div input.form-control{
+    width: auto;
+}

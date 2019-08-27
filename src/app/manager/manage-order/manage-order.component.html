@@ -1,0 +1,10 @@
+<p>manage-order works!</p>
+
+<div>
+    <ul *ngIf="orders">
+    <li *ngFor="let o of orders" class="list-group-item list-group"> {{o.orderText}}  ,{{o.orderCode}}
+      <button class="btn-sm" (click)="delOrder(o.orderCode)">מחיקה</button>
+      
+    </li>
+  </ul>
+    </div>
